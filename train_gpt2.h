@@ -230,7 +230,7 @@ void matmul_backward(float* dinp, float* dweight, float* dbias,
     // this backward could be done in a single "round" of loops
     // but that doesn't afford an efficient parallelization strategy
     // backward into inp first, parallelize over B,T
-    printf("%s\n", __func__);
+
     for (int b = 0; b < B; b++) {
         for (int t = 0; t < T; t++) {
             const float* dout_bt = dout + b * T * OC + t * OC;
@@ -1037,7 +1037,7 @@ void gpt2_free(GPT2 *model) {
 
 void print_my_name()
 {
-    printf("Trained by htseng@ucsd.edu\n");
+    printf("Trained by @\n");
 }
 #ifndef TESTING
 // if we are TESTING (see test_gpt2.c), we'll skip the int main below
