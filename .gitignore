@@ -51,3 +51,4 @@ out.png
 train_gpt2
 test_gpt2
 *.bin
+*.data
